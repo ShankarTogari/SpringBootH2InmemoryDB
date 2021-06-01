@@ -26,7 +26,7 @@ public class Cust_Controller {
 
 	@PostMapping("/saveCust")
 	public ResponseEntity<Customer> save(@RequestBody Customer cust) {
-		System.out.println("For GIT repo ");
+		int a=10;
 		try {
 			return new ResponseEntity<>(custRepo.save(cust), HttpStatus.CREATED);
 
