@@ -27,6 +27,7 @@ public class Cust_Controller {
 	@PostMapping("/saveCust")
 	public ResponseEntity<Customer> save(@RequestBody Customer cust) {
 		int a=10;
+		System.out.println(a);
 		try {
 			return new ResponseEntity<>(custRepo.save(cust), HttpStatus.CREATED);
 
