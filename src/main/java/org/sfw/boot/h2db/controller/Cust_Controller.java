@@ -3,10 +3,10 @@ package org.sfw.boot.h2db.controller;
 import java.util.List;
 import java.util.Optional;
 
-import org.hibernate.annotations.common.util.impl.LoggerFactory;
 import org.sfw.boot.h2db.entity.Customer;
 import org.sfw.boot.h2db.repo.CustomerRepository;
 import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -25,7 +25,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class Cust_Controller {
 	@Autowired
 	private CustomerRepository custRepo;
-	private static Logger log=(Logger) LoggerFactory.logger(Customer.class);
+	private static Logger log=LoggerFactory.getLogger(Customer.class);
 
 	@PostMapping("/saveCust")
 	public ResponseEntity<Customer> save(@RequestBody Customer cust) {
